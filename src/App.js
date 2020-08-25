@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
-import Header from "./components/Header";
-import EmployeeTable from "./components/EmployeeTable";
+import Header from "./components/Header/Header";
+import EmployeeTable from "./components/EmployeeTable/EmployeeTable";
 
 import moment from "moment";
 
@@ -49,7 +49,8 @@ function App() {
             moment(emp.dob.date)
               .format("L")
               .toLowerCase()
-              .includes(e.target.value.toLowerCase())
+              .includes(e.target.value.toLowerCase()) ||
+            emp.phone.includes(e.target.value)
         )
       );
     }
