@@ -72,11 +72,11 @@ function App() {
           style={{ width: "100%", marginTop: 70, border: "1px solid gray" }}
         >
           <tr style={{ border: "1px solid gray" }}>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>DOB</th>
+            <th>Image ^</th>
+            <th>Name ^</th>
+            <th>Phone ^</th>
+            <th>Email ^</th>
+            <th>DOB ^</th>
           </tr>
           {filemployees.map((emp, index) => (
             <EmployeeTable
