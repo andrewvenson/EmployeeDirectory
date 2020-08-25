@@ -73,7 +73,7 @@ function App() {
         >
           <tr style={{ border: "1px solid gray" }}>
             <th>Image ^</th>
-            <th>Name ^</th>
+            <th onClick={}>Name ^</th>
             <th>Phone ^</th>
             <th>Email ^</th>
             <th>DOB ^</th>
