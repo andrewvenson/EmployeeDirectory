@@ -71,24 +71,26 @@ function App() {
         <table
           style={{ width: "100%", marginTop: 70, border: "1px solid gray" }}
         >
-          <tr style={{ border: "1px solid gray" }}>
-            <th>Image ^</th>
-            <th onClick={}>Name ^</th>
-            <th>Phone ^</th>
-            <th>Email ^</th>
-            <th>DOB ^</th>
-          </tr>
-          {filemployees.map((emp, index) => (
-            <EmployeeTable
-              name={`${emp.name.first} ${emp.name.last}`}
-              phone={emp.phone}
-              email={emp.email}
-              dob={moment(emp.dob.date).format("L")}
-              image={emp.picture.large}
-              key={index}
-              index={index}
-            />
-          ))}
+          <tbody>
+            <tr style={{ border: "1px solid gray" }}>
+              <th>Image</th>
+              <th onClick={() => {}}>Name ^</th>
+              <th>Phone ^</th>
+              <th>Email ^</th>
+              <th>DOB ^</th>
+            </tr>
+            {filemployees.map((emp, index) => (
+              <EmployeeTable
+                name={`${emp.name.first} ${emp.name.last}`}
+                phone={emp.phone}
+                email={emp.email}
+                dob={moment(emp.dob.date).format("L")}
+                image={emp.picture.large}
+                key={index}
+                index={index}
+              />
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
