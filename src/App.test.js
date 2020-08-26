@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import App from "./App";
 
 describe("App Table Header", () => {
@@ -31,5 +31,14 @@ describe("App Table Header", () => {
     const { getByText } = render(<App />);
     const linkElement = getByText(/DOB/i);
     expect(linkElement).toBeInTheDocument();
+  });
+});
+
+describe("App search input ", () => {
+  test("search input", () => {
+    const { getByPlaceholderText } = render(<App />);
+    fireEvent.change(getByPlaceholderText(/Search/i), {
+      target: { value: "a" },
+    });
   });
 });
